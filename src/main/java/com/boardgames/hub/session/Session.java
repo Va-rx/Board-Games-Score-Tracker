@@ -24,5 +24,6 @@ public class Session {
     @ManyToOne
     @JoinColumn(name = "user_id")
     private User user;
+    @Column(nullable = false)
     private LocalDateTime playedAt;
 }

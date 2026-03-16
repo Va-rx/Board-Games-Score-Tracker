@@ -20,9 +20,11 @@ public class PlayerResult {
     @ManyToOne
     @JoinColumn(name = "session_id")
     private Session session;
+    @Column(nullable = false, unique = true, length = 20)
     private String playerName;
     @ManyToOne
     @JoinColumn(name = "game_column_id")
     private GameColumn column;
+    @Column(nullable = false, length = 30)
     private String value;
 }

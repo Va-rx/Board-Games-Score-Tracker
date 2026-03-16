@@ -21,6 +21,6 @@ public class GameColumn {
     @Column(nullable = false, length = 50, unique = true)
     private String name;
     @Enumerated(EnumType.STRING)
-    @Column(nullable = false)
+    @Column(nullable = false, length = 10)
     private ColumnType type;
 }

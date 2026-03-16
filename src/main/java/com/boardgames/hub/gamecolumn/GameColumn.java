@@ -19,5 +19,5 @@ public class GameColumn {
     @JoinColumn(name = "game_id")
     private Game game;
     private String name;
-    private String type;
+    private ColumnType type;
 }

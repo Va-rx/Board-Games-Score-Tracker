@@ -18,7 +18,7 @@ public class GameColumn {
     @ManyToOne
     @JoinColumn(name = "game_id")
     private Game game;
-    @Column(nullable = false, length = 50, unique = true)
+    @Column(nullable = false, length = 50)
     private String name;
     @Enumerated(EnumType.STRING)
     @Column(nullable = false, length = 10)

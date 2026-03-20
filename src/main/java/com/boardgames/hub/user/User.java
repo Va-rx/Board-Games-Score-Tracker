@@ -20,8 +20,6 @@ public class User {
     private String email;
     @Column(nullable = false, unique = true, length = 20)
     private String nickname;
-    @Column(nullable = false, length = 20)
-    private String name;
     @Column(nullable = false)
     private String password;
     @Column(nullable = false)

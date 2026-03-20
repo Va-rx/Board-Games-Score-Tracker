@@ -4,6 +4,8 @@ import com.boardgames.hub.user.User;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.time.LocalDateTime;
+
 @Entity
 @Table(name = "games")
 @Getter
@@ -18,8 +20,14 @@ public class Game {
     @Column(nullable = false, unique = true, length = 100)
     private String name;
     @Column(nullable = false)
-    private boolean isPublic;
-    @ManyToOne
-    @JoinColumn(name = "user_id")
-    private User user;
+    private LocalDateTime createdAt;
+//    @Column(nullable = false)
+//    private boolean isPublic;
+//    @ManyToOne
+//    @JoinColumn(name = "user_id")
+//    private User user;
+    @PrePersist
+    protected void onCreate() {
+        createdAt = LocalDateTime.now();
+    }
 }

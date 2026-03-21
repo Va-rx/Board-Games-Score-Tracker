@@ -22,7 +22,7 @@ public class User {
     private String nickname;
     @Column(nullable = false)
     private String password;
-    @Column(nullable = false)
+    @Column(nullable = false, updatable = false, name = "created_at")
     private LocalDateTime createdAt;
 
     @PrePersist

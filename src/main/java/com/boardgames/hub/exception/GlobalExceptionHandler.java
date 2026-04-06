@@ -32,6 +32,7 @@ public class GlobalExceptionHandler {
     }
 
     // Handles @Valid on DTO's
+    @ExceptionHandler(MethodArgumentNotValidException.class)
     public ResponseEntity<Object> handleMethodArgumentNotValidException(MethodArgumentNotValidException ex) {
         Map<String, String> validationErrors = new LinkedHashMap<>();
 

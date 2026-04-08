@@ -12,6 +12,7 @@ Web application designed for tracking and managing board game results, featuring
 ## Key Features
 1. Core Domain Model
 2. Well working API for Users, Groups, Games with appropriate status codes and messages
+3. Body validation
 
 ## Roadmap
 1. Rest of the endpoints: e.g: Creating Presets
